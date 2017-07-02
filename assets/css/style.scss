@@ -1,0 +1,208 @@
+@mixin headerStyle{
+	header{
+			background-color: rgb(12, 131, 151);
+			text-align: center;
+			padding: 2%;
+			color: rgb(255, 255, 255);
+			img{
+				border-radius: 2%;
+			}
+
+		}
+}
+
+.btn{
+	background-color: rgb(238, 112, 51);
+	border: 1px solid transparent;
+	border-radius: 2%;
+	text-transform: uppercase;
+	color: rgb(255, 255, 255);
+	font-weight: bold;
+	
+}
+
+body{
+	background-image: url('../../assets/background.jpg');
+	/*background-color: yellow;*/
+	background-size: 100% 100%;
+	background-position: 0% 50px;
+	background-repeat: no-repeat;
+	font-family: 'Open Sans', sans-serif;
+	
+	header{
+		img{
+			height: 30px;
+			left: 5%;
+			position: relative;
+		}
+	}
+
+
+
+	.container{
+		#transfer{
+			background-color: rgb(255, 255, 255);
+			@include headerStyle;
+			form{
+				padding: 2% 2% 10% 2%;
+				.form-group{
+					padding: 10% 1.5% 1.5%;
+					label{
+						text-transform: uppercase;
+						font-weight: bold;
+					}
+					input{
+						border: 0;
+						border-bottom: 1px solid rgb(213, 210, 205);
+						background-color: transparent;
+						width: 100%;
+
+					}
+				}
+				.submit{
+					button{
+						@extend .btn;
+						padding: 3% 20%;
+					}
+					button:hover{
+						cursor: pointer;
+					}
+					text-align: center;
+					
+				}
+				
+			}
+		}
+		#transactions{
+			background-color: rgb(255, 255, 255);
+			@include headerStyle;
+			.table-content{
+				padding: 20px 15px;
+			}
+			table{
+				width: 100%;
+				.center{
+					text-align: center;
+				}
+			}
+			table, tr{
+				border: 1px solid rgb(193, 193, 193);
+				border-collapse: collapse;
+			} 
+		}
+		#preview{
+			@include headerStyle;
+			background-color: rgb(255, 255, 255);
+			.preview-content{
+				padding: 5%;
+			}
+			button{
+				@extend .btn;
+				text-align: center;
+			}
+			button:hover{
+				cursor: pointer;
+			}
+			
+		}
+
+	}
+	
+}
+
+@media (min-width:320px) and (max-width:767px){
+	.container{
+		padding: 5%;
+		#transfer, #transactions{
+			width: 100%;
+			//color: yellow;
+		}
+		#transfer{
+			margin-bottom: 5%;
+			form{
+				.form-group{
+					font-size: 10px;
+				}
+			}
+		}
+		#transactions{
+			table{
+				font-size: 8px;
+				tr{
+					td{
+						span.type{
+							font-size: 7px;
+							margin-top: -10px;
+
+						}
+					}
+				}
+			}
+		}	
+		#preview{
+			.preview-content, button{
+				font-size: 10px;
+			}
+		}
+	}
+}
+
+@media (min-width:768px) and (max-width:1024px){
+	.container{
+		padding: 5%;
+		#transfer{
+			width: 50%;
+			margin-bottom: 5%;
+			margin-left: 25%;
+		}
+		#preview{
+			header{
+				font-size: 20px;
+			}
+		}
+	}
+}
+
+@media (min-width: 1025px){
+	.container{
+		padding: 50px 100px;
+		/* border: 1px solid black; */
+		height: 400px;
+		box-sizing: border-box;
+		#transfer{
+			float: left;
+			height: auto;
+			width: 300px;
+			form{
+				.form-group{
+					font-size: 12px;
+				}
+			}
+		}
+		#transactions{
+			float: right;
+			height: auto;
+			width: 800px;
+			table{
+				tr{
+					td{
+						span.type{
+							font-size: 12px;
+							margin-top: -20px;
+
+						}
+					}
+				}
+			}
+		}
+		#preview{
+			width: 500px;
+			margin: 0 25%;
+			button{
+				width: 30%;
+				padding: 2%;
+				
+			}
+		}
+	}
+}	

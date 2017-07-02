@@ -1,0 +1,132 @@
+.btn, body .container #transfer form .submit button, body .container #preview button {
+  background-color: #ee7033;
+  border: 1px solid transparent;
+  border-radius: 2%;
+  text-transform: uppercase;
+  color: white;
+  font-weight: bold; }
+
+body {
+  background-image: url("../../assets/background.jpg");
+  /*background-color: yellow;*/
+  background-size: 100% 100%;
+  background-position: 0% 50px;
+  background-repeat: no-repeat;
+  font-family: 'Open Sans', sans-serif; }
+  body header img {
+    height: 30px;
+    left: 5%;
+    position: relative; }
+  body .container #transfer {
+    background-color: white; }
+    body .container #transfer header {
+      background-color: #0c8397;
+      text-align: center;
+      padding: 2%;
+      color: white; }
+      body .container #transfer header img {
+        border-radius: 2%; }
+    body .container #transfer form {
+      padding: 2% 2% 10% 2%; }
+      body .container #transfer form .form-group {
+        padding: 10% 1.5% 1.5%; }
+        body .container #transfer form .form-group label {
+          text-transform: uppercase;
+          font-weight: bold; }
+        body .container #transfer form .form-group input {
+          border: 0;
+          border-bottom: 1px solid #d5d2cd;
+          background-color: transparent;
+          width: 100%; }
+      body .container #transfer form .submit {
+        text-align: center; }
+        body .container #transfer form .submit button {
+          padding: 3% 20%; }
+        body .container #transfer form .submit button:hover {
+          cursor: pointer; }
+  body .container #transactions {
+    background-color: white; }
+    body .container #transactions header {
+      background-color: #0c8397;
+      text-align: center;
+      padding: 2%;
+      color: white; }
+      body .container #transactions header img {
+        border-radius: 2%; }
+    body .container #transactions .table-content {
+      padding: 20px 15px; }
+    body .container #transactions table {
+      width: 100%; }
+      body .container #transactions table .center {
+        text-align: center; }
+    body .container #transactions table, body .container #transactions tr {
+      border: 1px solid #c1c1c1;
+      border-collapse: collapse; }
+  body .container #preview {
+    background-color: white; }
+    body .container #preview header {
+      background-color: #0c8397;
+      text-align: center;
+      padding: 2%;
+      color: white; }
+      body .container #preview header img {
+        border-radius: 2%; }
+    body .container #preview .preview-content {
+      padding: 5%; }
+    body .container #preview button {
+      text-align: center; }
+    body .container #preview button:hover {
+      cursor: pointer; }
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .container {
+    padding: 5%; }
+    .container #transfer, .container #transactions {
+      width: 100%; }
+    .container #transfer {
+      margin-bottom: 5%; }
+      .container #transfer form .form-group {
+        font-size: 10px; }
+    .container #transactions table {
+      font-size: 8px; }
+      .container #transactions table tr td span.type {
+        font-size: 7px;
+        margin-top: -10px; }
+    .container #preview .preview-content, .container #preview button {
+      font-size: 10px; } }
+@media (min-width: 768px) and (max-width: 1024px) {
+  .container {
+    padding: 5%; }
+    .container #transfer {
+      width: 50%;
+      margin-bottom: 5%;
+      margin-left: 25%; }
+    .container #preview header {
+      font-size: 20px; } }
+@media (min-width: 1025px) {
+  .container {
+    padding: 50px 100px;
+    /* border: 1px solid black; */
+    height: 400px;
+    box-sizing: border-box; }
+    .container #transfer {
+      float: left;
+      height: auto;
+      width: 300px; }
+      .container #transfer form .form-group {
+        font-size: 12px; }
+    .container #transactions {
+      float: right;
+      height: auto;
+      width: 800px; }
+      .container #transactions table tr td span.type {
+        font-size: 12px;
+        margin-top: -20px; }
+    .container #preview {
+      width: 500px;
+      margin: 0 25%; }
+      .container #preview button {
+        width: 30%;
+        padding: 2%; } }
+
+/*# sourceMappingURL=style.css.map */
